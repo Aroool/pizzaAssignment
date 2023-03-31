@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 public class Rev{
 	static Scanner sc = new Scanner(System.in);
-	/*static LinkedHashMap<String, Integer> lh = new LinkedHashMap<String, Integer>();
-	static ArrayList al = new ArrayList();*/
 	static int vegcost =  0;
 	static int vegsum = 0;
 	static int nonvegsum = 0;
@@ -20,18 +18,21 @@ public class Rev{
 		String type=null;
 		while(flag==1)
 		{
-		System.out.println("press 1:vegetarian pizza ,2:non-vegetarian pizza,3:side dishes,any number:exit");
+		System.out.println("
+				   Press 1: Vegetarian pizza ,
+				   Press 2: Non-vegetarian pizza,
+				   Press 3: Side dishes,
+				   Press 4: Any number:exit
+				   ");
 		int press = sc.nextInt();
 		switch(press)
 		{
 		case 1: type="vegetarian pizza";
-				/*al.add(type);*/
 				vegcost = vegetarian();
 				vegsum = vegsum + vegcost;
 		       break;
 			
 		case 2:type="non-vegetarian pizza";
-				/*al.add(type);*/
 				 nonVegcost =nonVegetarian() ;
 				nonvegsum = nonvegsum +nonVegcost;
 				break;
@@ -164,14 +165,12 @@ public class Rev{
 				     return total;
 					 
 			case 2 :style="cheese and corn";
-					/*al.add(style);*/
 					bcost = vegbase(press);
 			        tcost = vegtoppings(type);
 			        total = bcost+tcost;;
 				     return total;
 		            
 			case 3 :style="paneer tikka";
-					/*al.add(style);*/
 					bcost= vegbase(press);
 	                tcost= vegtoppings(type);
 	                total = bcost+tcost;;
